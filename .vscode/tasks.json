@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Dev Server (Turbopack)",
+      "type": "shell",
+      "command": "bun --bun turbo",
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Start Dev Server",
+      "type": "shell",
+      "command": "bun --bun dev",
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "rm -rf .next && bun --bun build",
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Lint",
+      "type": "shell",
+      "command": "bun eslint . --fix",
+      "problemMatcher": "$eslint-stylish",
+      "group": { "kind": "test", "isDefault": true }
+    },
+    {
+      "label": "Type Check",
+      "type": "shell",
+      "command": "bun tsc --noEmit",
+      "problemMatcher": "$tsc",
+      "group": { "kind": "test" }
+    }
+  ]
+}
