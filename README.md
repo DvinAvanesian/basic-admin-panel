@@ -1,6 +1,6 @@
 # Basic Admin Panel
 
-A work-in-progress administrative panel built with Next.js, Redis, and MongoDB.
+A work-in-progress administrative panel built with Remix, Redis, and MongoDB.
 
 ## System Architecture
 

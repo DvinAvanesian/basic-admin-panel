@@ -2,21 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Start Dev Server (Turbopack)",
-      "type": "shell",
-      "command": "bun --bun turbo",
-      "group": { "kind": "build", "isDefault": true }
-    },
-    {
       "label": "Start Dev Server",
       "type": "shell",
       "command": "bun --bun dev",
-      "group": { "kind": "build" }
+      "group": { "kind": "build", "isDefault": true }
     },
+
     {
       "label": "Build",
       "type": "shell",
-      "command": "rm -rf .next && bun --bun build",
+      "command": "bun --bun run build",
       "group": { "kind": "build" }
     },
     {
