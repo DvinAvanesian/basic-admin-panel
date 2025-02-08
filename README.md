@@ -36,7 +36,7 @@ bun install
 3. Create required directories:
 
 ```bash
-mkdir logs media
+mkdir logs media keys
 ```
 
 4. Create `.env` file (see .env.example)
@@ -53,20 +53,14 @@ docker compose up
 bun utils/fixtures.js
 ```
 
-7. Create the required directories:
-
-```bash
-mkdir {keys,logs,media}
-```
-
-8. Generate authentication keys:
+7. Generate authentication keys:
 
 ```bash
 openssl genpkey -algorithm RSA -out keys/private.pem
 openssl rsa -in keys/private.pem -pubout -out keys/public.pem
 ```
 
-9. Build and start the application:
+8. Build and start the application:
 
 ```bash
 bun --bun build
